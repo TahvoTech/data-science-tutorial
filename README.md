@@ -103,9 +103,9 @@ This project is based on the VS Code Data Science Tutorial.
 
    3. There are many machine learning algorithms to choose from to model the data. The scikit-learn library provides support for many of [them](https://scikit-learn.org/stable/user_guide.html) and a [chart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) to help select the one that's right for your scenario. For now, use the [Naïve Bayes algorithm](https://scikit-learn.org/stable/modules/naive_bayes.html), a common algorithm for classification problems. Add a cell with the following code to create and train the algorithm.
 
-        from sklearn.naive_bayes import GaussianNB
-        model = GaussianNB()
-        model.fit(X_train, y_train)
+from sklearn.naive_bayes import GaussianNB
+model = GaussianNB()
+model.fit(X_train, y_train)
 
    4. With a trained model, you can now try it against the test data set that was held back from training. Add and run the following code to predict the outcome of the test data and calculate the accuracy of the model.
 
