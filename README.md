@@ -51,10 +51,10 @@ This project follows the [Data Science Tutorial](https://code.visualstudio.com/d
 
 ## Project Structure
 
-├── data/               # Contains datasets used in the tutorial
-├── notebooks/          # Jupyter notebooks with code and analysis
-├── environment.yml     # Conda environment file for setting up the environment
-└── README.md           # Project README file
+  ├── data/               # Contains datasets used in the tutorial
+  ├── notebooks/          # Jupyter notebooks with code and analysis
+  ├── environment.yml     # Conda environment file for setting up the environment
+  └── README.md           # Project README file
 
 ## Contributing
 
