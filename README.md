@@ -64,3 +64,35 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 ## Acknowledgments
 
 This project is based on the VS Code Data Science Tutorial.
+
+
+# Data Science in VS Code tutorial 
+
+## Part 1. Prerequisites:
+        Visual Studio Code
+            Extensions:
+                Python extension for VS Code
+                Jupyter extension for VS Code
+        Miniconda or Full Anaconda distribution
+
+## Part 2. Set up a data science environment
+
+## Part 3. Prepare the data
+
+   - Play and clean the data
+   - Check correlations
+   - After preparation you will have a dataset that can be used for training a model
+      - in this case we chose: 'sex', 'pclass','age','relatives','fare','survived'
+
+## Part 4. Train and evaluate a model
+
+   - For this section use the scikit-learn library (as it offers some useful helper functions) to process the dataset, train a classification model to determinen survivability on the boat and then use the model with the test data to determinen its accuracy.
+
+   Steps:
+   1. common first step to training a model is to divide the dataset to training and validation data. This allows you to use a portion of the data to train the model and a portion of the data to test the model. If you used all your data to train the model, you wouldn't have a way to estimate how well it would actually perform against data the model hasn't yet seen. A benefit of the scikit-learn library is that it provides a method specifically for splitting a dataset into training and test data.
+   
+   Add and run a cell with the following code to the notebook to split up the data.
+
+        from sklearn.model_selection import train_test_split
+        x_train, x_test, y_train, y_test = train_test_split(data[['sex','pclass','age','relatives','fare']], data.survived, test_size=0.2, random_state=0)
+
