@@ -22,18 +22,19 @@ This project follows the [Data Science Tutorial](https://code.visualstudio.com/d
 
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/yourproject.git
+      git clone https://github.com/yourusername/yourproject.git
 
 2. Navigate to the project directory:
 
-   cd data-science-tutorial
+      cd data-science-tutorial
    
 3. Set up the Conda environment by using the yml from this repo:
 
-   conda env create -f environment.yml
+      conda env create -f environment.yml
 
 4. Activate the environment:
-   conda activate myenv
+
+      conda activate myenv
 
 
 ## Usage
