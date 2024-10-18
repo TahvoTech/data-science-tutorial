@@ -88,13 +88,13 @@ This project is based on the VS Code Data Science Tutorial.
 
    - For this section use the scikit-learn library (as it offers some useful helper functions) to process the dataset, train a classification model to determinen survivability on the boat and then use the model with the test data to determinen its accuracy.
 
-### 4.1
+### 4.1 Divide dataset to training and validation data
    common first step to training a model is to divide the dataset to training and validation data. This allows you to use a portion of the data to train the model and a portion of the data to test the model. If you used all your data to train the model, you wouldn't have a way to estimate how well it would actually perform against data the model hasn't yet seen. A benefit of the scikit-learn library is that it provides a method specifically for splitting a dataset into training and test data. Add and run a cell with the following code to the notebook to split up the data.
 
         from sklearn.model_selection import train_test_split
         x_train, x_test, y_train, y_test = train_test_split(data[['sex','pclass','age','relatives','fare']], data.survived, test_size=0.2, random_state=0)
 
-### 4.2
+### 4.2 Normalize the inputs
    Next, normalize the inputs such that all features are treated equally. For example, within the dataset the values for age range from ~0-100, while gender is only a 1 or 0. By normalizing all the variables, you can ensure that the ranges of values are all the same. Use the following code in a new code cell to scale the input values.
 
         from sklearn.preprocessing import StandardScaler
@@ -102,14 +102,14 @@ This project is based on the VS Code Data Science Tutorial.
         X_train = sc.fit_transform(x_train)
         X_test = sc.transform(x_test)
 
-### 4.3
+### 4.3 Choose, create & train the algorithm
    There are many machine learning algorithms to choose from to model the data. The scikit-learn library provides support for many of [them](https://scikit-learn.org/stable/user_guide.html) and a [chart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) to help select the one that's right for your scenario. For now, use the [Naïve Bayes algorithm](https://scikit-learn.org/stable/modules/naive_bayes.html), a common algorithm for classification problems. Add a cell with the following code to create and train the algorithm.
 
         from sklearn.naive_bayes import GaussianNB
         model = GaussianNB()
         model.fit(X_train, y_train)
 
-### 4.4
+### 4.4 Try the trained model against the test data set
    With a trained model, you can now try it against the test data set that was held back from training. Add and run the following code to predict the outcome of the test data and calculate the accuracy of the model.
 
         from sklearn import metrics
@@ -162,3 +162,13 @@ This project is based on the VS Code Data Science Tutorial.
         print(metrics.accuracy_score(y_test, y_pred))
 
    Similar to the training, you'll notice that you now have 79% accuracy in predicting survival of passengers. Using this simple neural network, the result is better than the 75% accuracy from the Naive Bayes Classifier tried previously.
+
+
+## Next steps
+
+   Now that you're familiar with the basics of performing machine learning within Visual Studio Code, here are some other Microsoft resources and tutorials to check out.
+
+   - [Data Science profile template](https://code.visualstudio.com/docs/editor/profiles#_data-science-profile-template) - Create a new [profile](https://code.visualstudio.com/docs/editor/profiles) with a curated set of extensions, settings, and snippets.
+   - Learn more about working with [Jupyter Notebooks in Visual Studio Code](https://youtu.be/FSdIoJdSnig) (video).
+   - [Get started with Azure Machine Learning for VS Code](https://learn.microsoft.com/azure/machine-learning/how-to-setup-vs-code) to deploy and optimize your model using the power of Azure.
+   - Find more data to explore on [Azure Open Data Sets](https://azure.microsoft.com/services/open-datasets/).
