@@ -90,7 +90,7 @@ This project is based on the VS Code Data Science Tutorial.
 
    Steps:
    1. common first step to training a model is to divide the dataset to training and validation data. This allows you to use a portion of the data to train the model and a portion of the data to test the model. If you used all your data to train the model, you wouldn't have a way to estimate how well it would actually perform against data the model hasn't yet seen. A benefit of the scikit-learn library is that it provides a method specifically for splitting a dataset into training and test data.
-   
+    
    Add and run a cell with the following code to the notebook to split up the data.
 
         from sklearn.model_selection import train_test_split
